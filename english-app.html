@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>انگلیسی، گام‌به‌گام</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f7f7;--surface:#fff;--ink:#12263a;--muted:#5b6f80;--line:#d3e0e2;--brand:#0b7f86;--brand-ink:#fff;--soft:#dcf0f0;--warn:#b4531a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a24;--surface:#162532;--ink:#e8f1f4;--muted:#93a8b5;--line:#2a3d4c;--brand:#3cc3c8;--brand-ink:#08202a;--soft:#17383f;--warn:#f0a066}}
+:root[data-theme="dark"]{--bg:#0e1a24;--surface:#162532;--ink:#e8f1f4;--muted:#93a8b5;--line:#2a3d4c;--brand:#3cc3c8;--brand-ink:#08202a;--soft:#17383f;--warn:#f0a066}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.8}
+main{max-width:560px;margin:0 auto;padding:28px 20px 48px}
+h1{font-size:2rem;font-weight:800;margin:0 0 4px;line-height:1.4}
+h2{font-size:1.3rem;font-weight:800;margin:0 0 6px}
+p{margin:0 0 12px;color:var(--muted)}
+.hidden{display:none!important}
+.steps{display:flex;align-items:flex-end;gap:6px;height:96px;margin:28px 0 32px;direction:ltr}
+.steps div{flex:1;background:var(--brand);border-radius:6px 6px 0 0;color:var(--brand-ink);font:800 .85rem Vazirmatn,sans-serif;text-align:center;padding-top:6px;opacity:.9}
+.steps div:nth-child(1){height:24%;opacity:.45}.steps div:nth-child(2){height:38%;opacity:.55}.steps div:nth-child(3){height:52%;opacity:.68}
+.steps div:nth-child(4){height:66%;opacity:.8}.steps div:nth-child(5){height:82%}.steps div:nth-child(6){height:100%}
+.card{display:block;width:100%;text-align:right;background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:18px 20px;color:var(--ink);font:inherit;cursor:pointer}
+.card:hover{border-color:var(--brand)}
+.card b{font-size:1.15rem;display:block}
+.card span{color:var(--muted);font-size:.95rem}
+button:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.last{margin-top:14px;font-size:.95rem}
+.bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin:14px 0 22px}
+.bar i{display:block;height:100%;background:var(--brand);width:0;transition:width .3s}
+.top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.9rem}
+.link{background:none;border:0;color:var(--brand);font:inherit;cursor:pointer;padding:4px 0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;direction:ltr;justify-content:center;margin:22px 0}
+.chip{font:600 1.15rem Vazirmatn,sans-serif;direction:ltr;padding:10px 20px;border-radius:999px;border:2px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.count{text-align:center;color:var(--muted);font-size:.9rem;min-height:1.6em}
+.btn{display:block;width:100%;margin-top:14px;padding:14px;border:0;border-radius:14px;background:var(--brand);color:var(--brand-ink);font:800 1.05rem Vazirmatn,sans-serif;cursor:pointer}
+.btn.alt{background:var(--soft);color:var(--ink)}
+.badge{width:120px;height:120px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:flex;align-items:center;justify-content:center;font:800 2.6rem Vazirmatn,sans-serif;margin:8px auto 14px;direction:ltr}
+.center{text-align:center}
+.row{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:.95rem}
+.row .n{width:30px;direction:ltr;font-weight:800;color:var(--ink)}
+.row .t{flex:1;height:10px;background:var(--line);border-radius:10px;overflow:hidden}
+.row .t i{display:block;height:100%;background:var(--brand)}
+.row .v{width:44px;color:var(--muted);text-align:left}
+.warn{color:var(--warn);font-size:.92rem;margin-top:14px}
+.card+.card{margin-top:12px}
+.tabs{display:flex;gap:6px;margin:16px 0;direction:ltr}
+.tab{flex:1;padding:8px 0;border:2px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:800 .95rem Vazirmatn,sans-serif;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.slide{text-align:center;background:var(--surface);border:2px solid var(--line);border-radius:20px;padding:28px 18px;margin:8px 0 16px;min-height:350px}
+.emo{font-size:5.5rem;line-height:1;background:var(--soft);border-radius:50%;width:150px;height:150px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.en{font:800 2.2rem Vazirmatn,sans-serif;direction:ltr;margin:0;color:var(--ink)}
+.fa{font-size:1.3rem;color:var(--brand);font-weight:600;margin:0 0 14px}
+.ex{direction:ltr;font-size:1.1rem;color:var(--ink);margin:0 0 16px}
+.snd{display:flex;gap:10px;justify-content:center}
+.pill{padding:10px 18px;border-radius:999px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:600 .95rem Vazirmatn,sans-serif;cursor:pointer}
+.pill:hover{border-color:var(--brand)}
+.nav{display:flex;gap:10px}.nav .btn{margin-top:0}
+.nav .btn:disabled{opacity:.4;cursor:default}
+.opt{display:flex;gap:8px;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem;margin-top:14px}
+.wl{list-style:none;padding:0;margin:12px 0 0;text-align:right;color:var(--ink)}
+.wl li{padding:6px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}
+.wl span{direction:ltr;font-weight:600}
+.ph{color:var(--muted);font-size:1rem;margin:0 0 6px}
+.qin{width:100%;font:600 1.4rem Vazirmatn,sans-serif;text-align:center;padding:12px;border:2px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);margin:8px 0}
+.qin:focus{outline:3px solid var(--brand);border-color:var(--brand)}
+.fb{min-height:1.8em;margin:10px 0;font-weight:600}.fb.ok{color:var(--brand)}.fb.bad{color:var(--warn)}
+.quiz .nav,.quiz .opt{display:none}
+.slide .btn{margin-top:10px}
+</style>
+</head>
+<body>
+<main>
+
+<section id="home">
+  <h1>انگلیسی، گام‌به‌گام</h1>
+  <p>یادگیری زبان انگلیسی برای فارسی‌زبانان</p>
+  <div class="steps" aria-hidden="true"><div>A1</div><div>A2</div><div>B1</div><div>B2</div><div>C1</div><div>C2</div></div>
+  <button class="card" id="startBtn">
+    <b>تعیین سطح</b>
+    <span>کلمه‌هایی را که می‌شناسید انتخاب کنید تا سطح شما مشخص شود.</span>
+  </button>
+  <button class="card" id="lessonsBtn">
+    <b>درس‌ها</b>
+    <span>آموزش اسلایدی با تصویر و تلفظ صوتی، برای همه‌ی سطح‌ها.</span>
+  </button>
+  <p class="last" id="lastLevel"></p>
+</section>
+
+<section id="lessons" class="hidden">
+  <div class="top"><span>درس‌ها</span><button class="link" id="lsBack">بازگشت</button></div>
+  <p style="margin-top:10px">سطح خود را انتخاب کنید و درس را اسلاید به اسلاید ببینید و بشنوید.</p>
+  <div class="tabs" id="tabs"></div>
+  <div id="lsList"></div>
+</section>
+
+<section id="slides" class="hidden">
+  <div class="top"><span id="slStep"></span><button class="link" id="slBack">بازگشت</button></div>
+  <div class="bar"><i id="slBar"></i></div>
+  <p id="slTitle" style="margin:0"></p>
+  <div class="slide" id="slBody"></div>
+  <div class="nav"><button class="btn alt" id="prevBtn">قبلی</button><button class="btn" id="nxtBtn">بعدی</button></div>
+  <label class="opt"><input type="checkbox" id="auto"> پخش خودکار تلفظ کلمه</label>
+  <p class="count" id="sndNote"></p>
+</section>
+
+<section id="test" class="hidden">
+  <div class="top"><span id="stepTxt"></span><button class="link" id="quitBtn">بازگشت</button></div>
+  <div class="bar"><i id="barFill"></i></div>
+  <h2>کدام کلمه‌ها را می‌شناسید؟</h2>
+  <p>روی کلمه‌هایی که معنی‌شان را می‌دانید بزنید. اگر مطمئن نیستید، انتخابش نکنید.</p>
+  <div class="chips" id="chips"></div>
+  <div class="count" id="count"></div>
+  <button class="btn" id="nextBtn">بعدی</button>
+</section>
+
+<section id="result" class="hidden center">
+  <p>سطح شما</p>
+  <div class="badge" id="badge"></div>
+  <h2 id="levelName"></h2>
+  <p id="levelNote"></p>
+  <div id="bars" style="text-align:right;margin-top:20px"></div>
+  <p class="warn hidden" id="warn"></p>
+  <button class="btn" id="againBtn">انجام دوباره آزمون</button>
+  <button class="btn alt" id="homeBtn">صفحه اصلی</button>
+</section>
+
+</main>
+<script>
+var LEVELS=[
+{id:"A1",fa:"مبتدی",w:["book","water","house","friend","happy","eat"]},
+{id:"A2",fa:"مقدماتی",w:["borrow","weather","journey","empty","invite","delicious"]},
+{id:"B1",fa:"متوسط",w:["achieve","improve","environment","opinion","familiar","suggest"]},
+{id:"B2",fa:"بالاتر از متوسط",w:["consequence","reluctant","aspect","ambiguous","thrive","valid"]},
+{id:"C1",fa:"پیشرفته",w:["meticulous","mitigate","inevitable","scrutinize","profound","pragmatic"]},
+{id:"C2",fa:"مسلط",w:["ephemeral","ubiquitous","obfuscate","quintessential","serendipity","perfunctory"]}
+];
+var FAKES=["blorent","tramplish","glomity","vessarine"];
+var PER=10, items=[], page=0, picked={}, KEY="english-app-level";
+
+function $(id){return document.getElementById(id)}
+function fa(n){return Number(n).toLocaleString("fa-IR")}
+function show(id){if(window.speechSynthesis)speechSynthesis.cancel();["home","test","result","lessons","slides"].forEach(function(s){$(s).classList.toggle("hidden",s!==id)});window.scrollTo(0,0)}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+
+function loadLast(){
+  var v=null;try{v=localStorage.getItem(KEY)}catch(e){}
+  var L=LEVELS.filter(function(l){return l.id===v})[0];
+  $("lastLevel").textContent=L?"آخرین نتیجه شما: "+L.id+" ("+L.fa+")":"";
+}
+
+function start(){
+  items=[];
+  LEVELS.forEach(function(l){l.w.forEach(function(w){items.push({w:w,l:l.id})})});
+  FAKES.forEach(function(w){items.push({w:w,l:"fake"})});
+  shuffle(items);picked={};page=0;renderPage();show("test");
+}
+
+function renderPage(){
+  var total=Math.ceil(items.length/PER);
+  $("stepTxt").textContent="صفحه "+fa(page+1)+" از "+fa(total);
+  $("barFill").style.width=(page/total*100)+"%";
+  $("nextBtn").textContent=page===total-1?"مشاهده نتیجه":"بعدی";
+  var box=$("chips");box.innerHTML="";
+  items.slice(page*PER,page*PER+PER).forEach(function(it){
+    var b=document.createElement("button");
+    b.className="chip";b.type="button";b.textContent=it.w;
+    b.setAttribute("aria-pressed",picked[it.w]?"true":"false");
+    b.onclick=function(){
+      picked[it.w]=!picked[it.w];
+      b.setAttribute("aria-pressed",picked[it.w]?"true":"false");
+      updateCount();
+    };
+    box.appendChild(b);
+  });
+  updateCount();
+}
+
+function updateCount(){
+  var n=items.slice(page*PER,page*PER+PER).filter(function(i){return picked[i.w]}).length;
+  $("count").textContent=n?fa(n)+" کلمه انتخاب شده":"هنوز کلمه‌ای انتخاب نشده";
+}
+
+function next(){
+  var total=Math.ceil(items.length/PER);
+  if(page<total-1){page++;renderPage();window.scrollTo(0,0)}else finish();
+}
+
+function finish(){
+  var fakeHit=FAKES.filter(function(w){return picked[w]}).length;
+  var p=fakeHit/FAKES.length, factor=1-0.5*p;
+  var best=null,rows="";
+  var failed=false;
+  LEVELS.forEach(function(l){
+    var k=l.w.filter(function(w){return picked[w]}).length;
+    var r=k/l.w.length*factor;
+    if(!failed&&r>=0.5)best=l;else failed=true;
+    rows+='<div class="row"><span class="n">'+l.id+'</span><span class="t"><i style="width:'+Math.round(k/l.w.length*100)+'%"></i></span><span class="v">'+fa(k)+" از "+fa(l.w.length)+'</span></div>';
+  });
+  var L=best||LEVELS[0];
+  $("badge").textContent=L.id;
+  $("levelName").textContent=L.fa;
+  $("levelNote").textContent=best?"شما بیشتر کلمه‌های این سطح و سطح‌های پایین‌تر را می‌شناسید.":"از سطح مبتدی شروع می‌کنیم؛ همه چیز از پایه آموزش داده می‌شود.";
+  $("bars").innerHTML=rows;
+  var w=$("warn");
+  if(fakeHit){w.textContent=fa(fakeHit)+" کلمه‌ی ساختگی هم انتخاب شد؛ برای همین امتیاز شما کمی کاهش یافت.";w.classList.remove("hidden")}else w.classList.add("hidden");
+  try{localStorage.setItem(KEY,L.id)}catch(e){}
+  show("result");
+}
+
+var LESSONS=[
+{lv:"A1",t:"Greetings",fa:"احوال‌پرسی",s:[["👋","Hello","سلام","Hello, I’m Sara."],["🌅","Good morning","صبح بخیر","Good morning, Ali!"],["🌙","Good night","شب بخیر","Good night, Mom."],["🙏","Thank you","ممنون","Thank you very much."],["😊","Please","لطفاً","Water, please."],["🤗","Goodbye","خداحافظ","Goodbye! See you soon."]]},
+{lv:"A1",t:"Food",fa:"غذا و نوشیدنی",s:[["🍎","apple","سیب","I eat an apple."],["💧","water","آب","I drink water."],["🍞","bread","نان","I like bread."],["🍚","rice","برنج","We eat rice."],["☕","tea","چای","Tea, please."]]},
+{lv:"A2",t:"Travel",fa:"سفر",s:[["✈️","airport","فرودگاه","The airport is big."],["🎫","ticket","بلیت","I need a ticket."],["🧳","suitcase","چمدان","My suitcase is heavy."],["🏨","hotel","هتل","The hotel is near here."],["🗺️","map","نقشه","Where is the map?"]]},
+{lv:"B1",t:"Opinions and goals",fa:"نظر و هدف",s:[["💬","In my opinion","به نظر من","In my opinion, it’s a good idea."],["🎯","achieve","به دست آوردن","She achieved her goal."],["📈","improve","بهبود دادن","I want to improve my English."],["💡","suggest","پیشنهاد دادن","I suggest we start early."],["🌍","environment","محیط زیست","We must protect the environment."]]},
+{lv:"B2",t:"Describing situations",fa:"توصیف موقعیت‌ها",s:[["😬","reluctant","بی‌میل","He was reluctant to go."],["⚖️","consequence","پیامد","Every action has a consequence."],["🌱","thrive","شکوفا شدن","Plants thrive in sunlight."],["❓","ambiguous","مبهم","The answer was ambiguous."],["🔍","aspect","جنبه","Consider every aspect of the plan."]]},
+{lv:"C1",t:"Precise language",fa:"زبان دقیق",s:[["🔬","meticulous","دقیق و وسواس‌دار","She is meticulous about details."],["🩹","mitigate","کاهش دادن","Trees help mitigate the heat."],["🌀","inevitable","اجتناب‌ناپذیر","Change is inevitable."],["🧐","scrutinize","موشکافی کردن","Scrutinize the contract first."],["🧠","pragmatic","عمل‌گرا","We need a pragmatic solution."]]},
+{lv:"C2",t:"Nuance",fa:"ظرافت‌های زبان",s:[["🌸","ephemeral","زودگذر","Fame is often ephemeral."],["📱","ubiquitous","همه‌جا حاضر","Smartphones are ubiquitous."],["🍀","serendipity","اتفاق خوش‌یمن","We met by pure serendipity."],["💎","quintessential","نمونه‌ی کامل","He is the quintessential gentleman."],["🌫️","obfuscate","عمداً مبهم کردن","Don’t obfuscate the facts."]]}
+];
+var curLv="A1",cur=null,si=0;
+var PH={"Hello":"هِلو","Good morning":"گود مورنینگ","Good night":"گود نایت","Thank you":"تَنک یو","Please":"پلیز","Goodbye":"گودبای","apple":"اَپِل","water":"واتِر","bread":"بِرِد","rice":"رایس","tea":"تی","airport":"اِرپورت","ticket":"تیکِت","suitcase":"سوتکِیس","hotel":"هوتِل","map":"مَپ","In my opinion":"این مای اُپینیِن","achieve":"اَچیو","improve":"ایمپروو","suggest":"ساجِست","environment":"اینوایرنمِنت","reluctant":"ریلاکتِنت","consequence":"کانسِکوِنس","thrive":"ثرایو","ambiguous":"اَمبیگیوِس","aspect":"اَسپِکت","meticulous":"مِتیکیولِس","mitigate":"میتیگِیت","inevitable":"اینِویتِبِل","scrutinize":"اسکروتینایز","pragmatic":"پرَگمَتیک","ephemeral":"ایفِمِرِل","ubiquitous":"یوبیکویتِس","serendipity":"سِرِندیپیتی","quintessential":"کوینتِسِنشِل","obfuscate":"آبفاسکِیت"};
+var VOICE=null;
+function pickVoice(){var S=window.speechSynthesis;if(!S||!S.getVoices)return;var v=S.getVoices()||[];VOICE=v.filter(function(x){return /^en[-_]US/i.test(x.lang)})[0]||v.filter(function(x){return /^en/i.test(x.lang)})[0]||null}
+if(window.speechSynthesis){pickVoice();if(speechSynthesis.addEventListener)speechSynthesis.addEventListener("voiceschanged",pickVoice);else speechSynthesis.onvoiceschanged=pickVoice}
+function speak(t,r){
+  var S=window.speechSynthesis,N=$("sndNote");
+  if(!S||typeof SpeechSynthesisUtterance==="undefined"){N.textContent="این مرورگر پخش صدا را پشتیبانی نمی‌کند. از تلفظ فارسی زیر کلمه استفاده کنید یا برنامه را با Chrome، Edge یا Safari باز کنید.";return}
+  pickVoice();
+  N.textContent=(!VOICE&&(S.getVoices()||[]).length)?"صدای انگلیسی روی این دستگاه نصب نیست؛ آن را در تنظیمات زبان و صدای دستگاه اضافه کنید.":"";
+  function go(){
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang=VOICE?VOICE.lang:"en-US";if(VOICE)u.voice=VOICE;u.rate=r||.85;
+    u.onerror=function(e){if(e.error&&e.error!=="canceled"&&e.error!=="interrupted")N.textContent="پخش صدا انجام نشد؛ یک بار دیگر دکمه را بزنید."};
+    window._utt=u;
+    try{if(S.paused)S.resume();S.speak(u)}catch(e){N.textContent="پخش صدا انجام نشد."}
+  }
+  if(S.speaking||S.pending){S.cancel();setTimeout(go,80)}else go();
+}
+function speakLegacy(t){var S=window.speechSynthesis;if(!S){$("sndNote").textContent="مرورگر شما از پخش صدا پشتیبانی نمی‌کند.";return}S.cancel();var u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.85;S.speak(u)}
+function showLessons(){
+  var tb=$("tabs");tb.innerHTML="";
+  LEVELS.forEach(function(l){var b=document.createElement("button");b.className="tab";b.textContent=l.id;b.setAttribute("aria-pressed",l.id===curLv?"true":"false");b.onclick=function(){curLv=l.id;showLessons()};tb.appendChild(b)});
+  var list=$("lsList");list.innerHTML="";
+  var L=LESSONS.filter(function(x){return x.lv===curLv});
+  L.forEach(function(x){var b=document.createElement("button");b.className="card";b.innerHTML="<b>"+x.t+" — "+x.fa+"</b><span>"+fa(x.s.length)+" اسلاید";b.onclick=function(){cur=x;si=0;renderSlide();show("slides")};list.appendChild(b)});
+  show("lessons");
+}
+function renderSlide(){
+  var n=cur.s.length,h;
+  $("slTitle").textContent=cur.t+" — "+cur.fa;
+  $("slBar").style.width=(si/n*100)+"%";
+  $("slStep").textContent=si<n?"اسلاید "+fa(si+1)+" از "+fa(n):"پایان درس";
+  $("sndNote").textContent="";
+  if(si<n){var s=cur.s[si];
+    h='<div class="emo">'+s[0]+'</div><p class="en">'+s[1]+'</p>'+(PH[s[1]]?'<p class="ph">'+PH[s[1]]+'</p>':'')+'<p class="fa">'+s[2]+'</p><p class="ex">'+s[3]+'</p><div class="snd"><button class="pill" data-t="'+s[1]+'">🔊 کلمه</button><button class="pill" data-t="'+s[3]+'">🔊 جمله</button></div>';
+  }else{
+    h='<div class="emo">🎉</div><h2>آفرین! درس تمام شد</h2><ul class="wl">'+cur.s.map(function(s){return"<li>"+s[0]+" <span>"+s[1]+"</span><em style=\"font-style:normal;color:var(--muted)\">"+s[2]+"</em></li>"}).join("")+"</ul><button class=\"btn\" id=\"qStart\">🎯 آزمون املا و تلفظ</button>";
+  }
+  $("slides").classList.remove("quiz");$("slBody").innerHTML=h;var qs=$("qStart");if(qs)qs.onclick=startQuiz;
+  Array.prototype.forEach.call($("slBody").querySelectorAll(".pill"),function(p){p.onclick=function(){speak(p.getAttribute("data-t"))}});
+  $("prevBtn").disabled=si===0;
+  $("nxtBtn").textContent=si<n?"بعدی":"بازگشت به درس‌ها";
+  if(si<n&&$("auto").checked)speak(cur.s[si][1]);
+}
+var SR=window.SpeechRecognition||window.webkitSpeechRecognition,Q=null;
+function norm(s){return String(s).toLowerCase().replace(/[^a-z ]/g,"").replace(/\s+/g," ").trim()}
+function fb(c,t){var e=$("qFb");e.className="fb "+c;e.textContent=t}
+function listen(cb){
+  var r=new SR(),fin=false;r.lang="en-US";r.maxAlternatives=5;r.interimResults=false;
+  r.onresult=function(e){fin=true;var al=[];for(var i=0;i<e.results[0].length;i++)al.push(e.results[0][i].transcript);cb(al)};
+  r.onerror=function(e){if(!fin){fin=true;cb(null,e.error)}};
+  r.onend=function(){if(!fin){fin=true;cb(null,"no-speech")}};
+  try{r.start()}catch(x){fin=true;cb(null,"error")}
+}
+function errMsg(e){return e==="not-allowed"||e==="service-not-allowed"?"دسترسی به میکروفون داده نشد. اجازه‌ی میکروفون را در مرورگر فعال کنید.":e==="no-speech"?"صدایی شنیده نشد؛ دوباره امتحان کنید.":e==="audio-capture"?"میکروفون پیدا نشد.":"تشخیص گفتار انجام نشد؛ دوباره امتحان کنید."}
+function qHead(){$("slides").classList.add("quiz");$("slStep").textContent="آزمون: سؤال "+fa(Q.i+1)+" از "+fa(Q.a.length);$("slBar").style.width=(Q.i/Q.a.length*100)+"%";$("sndNote").textContent=""}
+function startQuiz(){var a=cur.s.slice();shuffle(a);Q={a:a,i:0,sp:0,pr:0,heard:false};qSpell()}
+function qPlayers(w){$("qPlay").onclick=function(){speak(w)};$("qSlow").onclick=function(){speak(w,.5)}}
+function qSpell(){
+  qHead();var s=Q.a[Q.i],done=false;
+  $("slBody").innerHTML='<div class="emo">'+s[0]+'</div><p class="fa">'+s[2]+'</p><p>تلفظ را بشنوید و املای کلمه را بنویسید.</p><div class="snd"><button class="pill" id="qPlay">🔊 تکرار</button><button class="pill" id="qSlow">🐢 آهسته</button></div><input class="qin" id="qIn" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><div class="fb" id="qFb"></div><button class="btn" id="qGo">بررسی</button>';
+  qPlayers(s[1]);
+  function check(){
+    if(done){qSay();return}
+    done=true;var ok=norm($("qIn").value)===norm(s[1]);if(ok)Q.sp++;
+    $("qIn").disabled=true;fb(ok?"ok":"bad",ok?"✅ املا درست است":"❌ املای درست: "+s[1]);$("qGo").textContent="مرحله‌ی تلفظ";
+  }
+  $("qGo").onclick=check;$("qIn").onkeydown=function(e){if(e.key==="Enter")check()};
+  speak(s[1]);$("qIn").focus();
+}
+function qSay(){
+  qHead();var s=Q.a[Q.i],got=false;
+  $("slBody").innerHTML='<div class="emo">'+s[0]+'</div><p class="en">'+s[1]+'</p>'+(PH[s[1]]?'<p class="ph">'+PH[s[1]]+'</p>':'')+'<div class="snd"><button class="pill" id="qPlay">🔊 تکرار</button><button class="pill" id="qSlow">🐢 آهسته</button></div><button class="btn" id="qMic">🎤 تلفظ کنید</button><div class="fb" id="qFb"></div><button class="btn alt" id="qNext">رد شدن</button>';
+  qPlayers(s[1]);
+  $("qNext").onclick=function(){Q.i++;if(Q.i<Q.a.length)qSpell();else qEnd()};
+  $("qMic").onclick=function(){
+    if(!SR){fb("bad","این مرورگر تشخیص گفتار را پشتیبانی نمی‌کند (Chrome یا Edge را امتحان کنید).");$("qNext").textContent="بعدی";return}
+    if(window.speechSynthesis)speechSynthesis.cancel();
+    var m=$("qMic");m.disabled=true;m.textContent="در حال شنیدن…";fb("","");
+    listen(function(alts,err){
+      m.disabled=false;m.textContent="🎤 دوباره تلفظ کنید";$("qNext").textContent="بعدی";
+      if(!alts){fb("bad",errMsg(err));return}
+      Q.heard=true;
+      var ok=alts.some(function(a){return norm(a)===norm(s[1])});
+      if(ok){if(!got){got=true;Q.pr++}fb("ok","✅ تلفظ درست است")}
+      else fb("bad","❌ تلفظ درست نیست. شنیده شد: «"+alts[0]+"». یک بار گوش کنید و دوباره بگویید.");
+    });
+  };
+}
+function qEnd(){
+  $("slides").classList.add("quiz");var n=Q.a.length;
+  $("slStep").textContent="نتیجه‌ی آزمون";$("slBar").style.width="100%";
+  $("slBody").innerHTML='<div class="emo">🏆</div><h2>نتیجه‌ی آزمون</h2><p>املا: '+fa(Q.sp)+' از '+fa(n)+'</p><p>تلفظ: '+(Q.heard?fa(Q.pr)+' از '+fa(n):'بررسی نشد')+'</p><button class="btn" id="qAgain">آزمون دوباره</button><button class="btn alt" id="qBack">بازگشت به درس‌ها</button>';
+  $("qAgain").onclick=startQuiz;$("qBack").onclick=showLessons;
+}
+function slNext(){if(si<cur.s.length){si++;renderSlide()}else showLessons()}
+function slPrev(){if(si>0){si--;renderSlide()}}
+$("lessonsBtn").onclick=showLessons;
+$("lsBack").onclick=function(){loadLast();show("home")};
+$("slBack").onclick=showLessons;
+$("nxtBtn").onclick=slNext;
+$("prevBtn").onclick=slPrev;
+document.onkeydown=function(e){if($("slides").classList.contains("hidden")||$("slides").classList.contains("quiz"))return;if(e.key==="ArrowLeft")slNext();if(e.key==="ArrowRight")slPrev()};
+$("startBtn").onclick=start;
+$("againBtn").onclick=start;
+$("nextBtn").onclick=next;
+$("quitBtn").onclick=function(){loadLast();show("home")};
+$("homeBtn").onclick=function(){loadLast();show("home")};
+loadLast();
+</script>
+</body>
+</html>
